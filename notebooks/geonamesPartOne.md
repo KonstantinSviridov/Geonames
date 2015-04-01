@@ -32,7 +32,7 @@ USERNAME = prompt("Please, enter your GeoNames username.")
 
 // Read about the GeoNames RAML API at https://anypoint.mulesoft.com/apiplatform/popular/admin/#/dashboard/apis/7648/versions/7775/contracts
 
-API.createClient('client', '/apiplatform/repository/public/organizations/30/apis/7648/versions/7775/definition');
+API.createClient('client', '#REF_TAG_DEFENITION');
 
 ```
 
