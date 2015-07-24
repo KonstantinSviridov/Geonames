@@ -1,6 +1,8 @@
 #%RAML 0.8
 title: GeoNames
 baseUri: http://api.geonames.org
+securitySchemes:
+  - usernameSchema: !include securitySchemes/usernameSchema.raml
 schemas:
   - postal-codes-xml: !include schemas/postal-codes-xml-schema.xsd
   - astergdem-xml: !include schemas/astergdem-xml-schema.xsd
@@ -84,6 +86,7 @@ traits:
   - hasStyle: !include traits/hasStyle.raml
   - acceptsPoint: !include traits/acceptsPoint.raml
   - wikipediaQuery: !include traits/wikipediaQuery.raml
+securedBy: [ usernameSchema ]
 /postalCodeSearch{mediaTypeSuffix}: 
   type: multiformat
   get: 
